@@ -1,0 +1,20 @@
+#http server port
+server:
+  port: 8082
+#Definition des parametres de la base de donnees H2
+spring:
+  datasource:
+    url: jdbc:h2:mem:workoutdb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+    #Effectue l initialisation de la base en differe (data.sql)
+    defer-datasource-initialization: true
+
+#Active la console Web H2 (http://localhost:8080/h2-console)
+  h2:
+    console:
+      enabled: true

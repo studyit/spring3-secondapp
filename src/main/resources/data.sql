@@ -1,0 +1,2 @@
+insert into PERSON (person_id, first_name, last_name, pseudo, email) VALUES (1, 'Frederic', 'Mencier', 'Fred', 'fmencier@yahoo.fr');
+insert into WORKOUT (workout_id, person_id, name, date, distance, up, down) values (1, 1, 'Bord du Rhone', '2024-01-27', 10000, 300, 300);
