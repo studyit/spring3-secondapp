@@ -3,11 +3,11 @@ package com.sample.firstapp.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Set;
+import java.util.List;
 
 @Data
 @Entity(name="PERSON")
-public class User {
+public class Person {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -26,6 +26,6 @@ public class User {
     @Column(name="EMAIL", length=100)
     private String email;
 
-    @OneToMany(mappedBy="user")
-    private Set<Workout> workouts;
+    @OneToMany(mappedBy="person", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Workout> workouts;
 }

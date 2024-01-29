@@ -31,6 +31,6 @@ public class Workout {
     private Double down;
 
     @ManyToOne
-    @JoinColumn(name="person_id", nullable=false)
-    private User user;
+    @JoinColumn(name="PERSON_ID", nullable=false)
+    private Person person;
 }

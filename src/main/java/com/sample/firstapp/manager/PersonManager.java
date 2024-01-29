@@ -1,7 +1,7 @@
 package com.sample.firstapp.manager;
 
 import com.sample.firstapp.dto.PersonDto;
-import com.sample.firstapp.entity.User;
+import com.sample.firstapp.entity.Person;
 import com.sample.firstapp.mapper.EntityToDtoMapper;
 import com.sample.firstapp.repository.PersonRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -24,8 +24,8 @@ public class PersonManager {
     }
 
     public List<PersonDto> getAllPerson() {
-        List<User> personList = personRepository.findAll();
+        List<Person> personList = personRepository.findAll();
         log.info("Find {} persons", personList.size());
-        return personList.stream().map(entityToDtoMapper::userToPersonDto).collect(Collectors.toList());
+        return personList.stream().map(entityToDtoMapper::personToPersonDto).collect(Collectors.toList());
     }
 }

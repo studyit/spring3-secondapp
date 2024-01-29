@@ -1,0 +1,11 @@
+GET http://localhost:8082/persons
+
+###
+
+GET http://localhost:8082/workouts?name=du
+Accept: application/json
+
+###
+
+GET http://localhost:8082/workoutsIgnoreCase?name=DU
+Accept: application/json

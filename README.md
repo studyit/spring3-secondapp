@@ -3,8 +3,8 @@ Sample App With Springboot3 (3.2.2)
 
 Basic app :
 - Base H2 in Memory (Preload en SQL)
-- 1 JPARepository
-- 1 Controller REST (**GetMapping**), Constructor Injection
+- 2 JPARepository (**Custom Query**, **Query Method**)
+- 2 Controller REST (**GetMapping**), Constructor Injection
 - 2 Entity (1 Relation ManyToOne)
 - Logging (Slf4j)
 - 1 TU Controller Rest
