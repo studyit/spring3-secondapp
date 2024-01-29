@@ -1,17 +1,8 @@
 package com.sample.firstapp.dto;
 
-import lombok.Data;
-
-@Data
-public class PersonDto {
-
-    private Long personId;
-
-    private String firstName;
-
-    private String lastName;
-
-    private String pseudo;
-
-    private String email;
+public record PersonDto(Long personId,
+                        String firstName,
+                        String lastName,
+                        String pseudo,
+                        String email) {
 }

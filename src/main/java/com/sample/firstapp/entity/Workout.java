@@ -3,7 +3,7 @@ package com.sample.firstapp.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 @Entity(name="WORKOUT")
@@ -19,7 +19,7 @@ public class Workout {
 
     @Temporal(TemporalType.DATE)
     @Column(name="DATE")
-    private Date date;
+    private LocalDate date;
 
     @Column(name="DISTANCE")
     private Double distance;

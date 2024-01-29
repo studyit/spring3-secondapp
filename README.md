@@ -1,15 +1,16 @@
 # spring3-secondapp
-Sample App With Springboot3
+Sample App With Springboot3 (3.2.2)
 
 Basic app :
 - Base H2 in Memory (Preload en SQL)
-- 1 Controller REST (GET)
+- 1 JPARepository
+- 1 Controller REST (**GetMapping**), Constructor Injection
 - 2 Entity (1 Relation ManyToOne)
 - Logging (Slf4j)
 - 1 TU Controller Rest
 - 1 .http test
-- Properties with .yaml file
-- Lombok
+- **Properties with .yaml file**
+- Lombok + **Record**
 - MapStruct
 
 
