@@ -1,4 +1,4 @@
-package com.sample.firstapp.controller;
+package com.sample.secondapp.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

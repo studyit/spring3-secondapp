@@ -1,4 +1,4 @@
-package com.sample.firstapp.dto;
+package com.sample.secondapp.dto;
 
 import java.util.Set;
 

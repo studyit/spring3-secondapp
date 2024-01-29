@@ -1,9 +1,9 @@
-package com.sample.firstapp.manager;
+package com.sample.secondapp.manager;
 
-import com.sample.firstapp.dto.PersonDto;
-import com.sample.firstapp.entity.Person;
-import com.sample.firstapp.mapper.EntityToDtoMapper;
-import com.sample.firstapp.repository.PersonRepository;
+import com.sample.secondapp.dto.PersonDto;
+import com.sample.secondapp.entity.Person;
+import com.sample.secondapp.mapper.EntityToDtoMapper;
+import com.sample.secondapp.repository.PersonRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

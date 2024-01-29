@@ -1,7 +1,7 @@
-package com.sample.firstapp.controller;
+package com.sample.secondapp.controller;
 
-import com.sample.firstapp.dto.PersonDto;
-import com.sample.firstapp.manager.PersonManager;
+import com.sample.secondapp.dto.PersonDto;
+import com.sample.secondapp.manager.PersonManager;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
