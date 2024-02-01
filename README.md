@@ -9,6 +9,7 @@ Basic app :
 - Logging (Slf4j)
 - 1 TU Controller Rest
 - 1 .http test
+- **ExceptionHandling (ControllerAdvice, ResponseStatusException)**
 - **Properties with .yaml file**
 - Lombok + **Record**
 - MapStruct

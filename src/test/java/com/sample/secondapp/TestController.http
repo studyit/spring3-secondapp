@@ -1,4 +1,17 @@
 GET http://localhost:8082/persons
+Accept: application/json
+
+###
+
+//Return person with id 1
+GET http://localhost:8082/person/1
+Accept: application/json
+
+###
+
+//Return Custom Error 404
+GET http://localhost:8082/person/2
+Accept: application/json
 
 ###
 
@@ -9,3 +22,26 @@ Accept: application/json
 
 GET http://localhost:8082/workoutsIgnoreCase?name=DU
 Accept: application/json
+
+###
+
+//Return workout 1
+GET http://localhost:8082/workout/1
+Accept: application/json
+
+###
+//Return Custom Error 404
+GET http://localhost:8082/workout/2
+Accept: application/json, application/problem+json
+
+###
+POST http://localhost:8082/person
+Accept: application/json, application/problem+json
+Content-Type: application/json
+
+{
+  "firstName": "Jerome",
+  "lastName": "Durand",
+  "pseudo": "GG",
+  "email": "j.durand@gmail.com"
+}

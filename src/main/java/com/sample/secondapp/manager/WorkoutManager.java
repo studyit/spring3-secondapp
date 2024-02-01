@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -33,5 +35,10 @@ public class WorkoutManager {
         List<Workout> workoutList = workoutRepository.findByNameIsLikeIgnoreCase("%" + name + "%");
         log.info("Find {} workouts", workoutList.size());
         return workoutList.stream().map(entityToDtoMapper::workoutToWorkoutDto).collect(Collectors.toList());
+    }
+
+    public WorkoutDto getWorkout(final Long workoutId) {
+        Optional<Workout> optionalWorkout = workoutRepository.findById(workoutId);
+        return optionalWorkout.map(entityToDtoMapper::workoutToWorkoutDto).orElseThrow(()-> new NoSuchElementException("Workout with id " + workoutId + " not found"));
     }
 }

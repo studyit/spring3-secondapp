@@ -4,6 +4,7 @@ import com.sample.secondapp.dto.WorkoutDto;
 import com.sample.secondapp.manager.WorkoutManager;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,5 +28,10 @@ public class WorkoutController {
     @GetMapping("/workoutsIgnoreCase")
     public List<WorkoutDto> getAllWorkoutIgnoreCase(@RequestParam("name") String name) {
         return workoutManager.getWorkoutsIgnoreCase(name);
+    }
+
+    @GetMapping(value = "/workout/{workoutId}", produces = {"application/json", "application/problem+json"})
+    public WorkoutDto getWorkout(@PathVariable("workoutId") Long workoutId) {
+        return workoutManager.getWorkout(workoutId);
     }
 }

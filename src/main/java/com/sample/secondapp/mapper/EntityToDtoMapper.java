@@ -10,5 +10,7 @@ import org.mapstruct.Mapper;
 public interface EntityToDtoMapper {
     PersonDto personToPersonDto(Person person);
 
+    Person personDtoToPerson(PersonDto personDto);
+
     WorkoutDto workoutToWorkoutDto(Workout workout);
 }
